@@ -1,1 +1,1 @@
-# doubleClick
+# DoubleClick on Android Views.
