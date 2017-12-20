@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class DoubleClick implements View.OnClickListener {
 
+    private final long TIME_TO_LISTEN_A_DOUBLE_CLICK = 400L;
     private int clicks;
     private final DoubleClickListener doubleClickListener;
 
@@ -21,19 +22,25 @@ public class DoubleClick implements View.OnClickListener {
 
     @Override
     public void onClick(@Nullable final View v) {
+
+        // Increase clicks count
         this.clicks++;
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public final void run() {
-                if (clicks == 1) {
-                    doubleClickListener.onSingleClick(v);
-                }
-                if (clicks >= 2) {
+
+                if (clicks >= 2) {  // Double tap.
                     doubleClickListener.onDoubleClick(v);
                 }
-            }
-        }, 200L);
-    }
 
+                if (clicks == 1) {  // Single tap
+                    doubleClickListener.onSingleClick(v);
+                }
+
+                // we need to  restore clicks count
+                clicks = 0;
+            }
+        }, TIME_TO_LISTEN_A_DOUBLE_CLICK);
+    }
 }
