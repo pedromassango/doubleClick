@@ -1,32 +1,35 @@
 # DoubleClick on Android Views.
-
+A android library lo handle double click on android Views components. You just need to call it on your view `onCLickListener`.
 ## Requirements
 ​
-- Android API level 15 or greater
+- Android API level 14 or greater
 - Your favorite IDE
 
 ## Setting up
 
 Gradle:
-```groovy
-Step 1. Add the JitPack repository to your build file
 
+Step 1. Add the JitPack repository to your build file.
 Add it in your root build.gradle at the end of repositories:
+```groovy
 allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
+```
 
 Step 2. Add the dependency
-
+```groovy
 dependencies {
 	        compile 'com.github.pedromassango:doubleClick:1.0'
 	}
 ```
 
 Maven:
+
+Step 1. register jitpack.io
 ```xml
 <repositories>
 		<repository>
@@ -34,9 +37,11 @@ Maven:
 		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
+```
 
-** Step 2. Add the dependency
+Step 2. Add the dependency
 
+```xml
 <dependency>
 	    <groupId>com.github.pedromassango</groupId>
 	    <artifactId>doubleClick</artifactId>
