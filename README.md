@@ -13,17 +13,17 @@ Step 1. Add the JitPack repository to your build file.
 Add it in your root build.gradle at the end of repositories:
 ```groovy
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 Step 2. Add the dependency
 ```groovy
 dependencies {
-	        compile 'com.github.pedromassango:doubleClick:1.0'
+	        compile 'com.github.pedromassango:doubleClick:v1.1'
 	}
 ```
 
@@ -32,30 +32,30 @@ Maven:
 Step 1. register jitpack.io
 ```xml
 <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
 ```
 
 Step 2. Add the dependency
 
 ```xml
 <dependency>
-	    <groupId>com.github.pedromassango</groupId>
-	    <artifactId>doubleClick</artifactId>
-	    <version>1.0</version>
-	</dependency>
+    <groupId>com.github.pedromassango</groupId>
+    <artifactId>doubleClick</artifactId>
+    <version>v1.1</version>
+</dependency>
 ```
 
 
 ## Basic usage
 
-The class DoubleClick extends of `View.OnClickListener` so, just call the `DoubleClick` class on you onClickListener Button
-and pass a instance of `DoubleClickListener` class to listen the events.
+The class `DoubleClick` extends from `View.OnClickListener` so, just call the `DoubleClick` class on you onClickListener 
+of the view that you wish to listen, and pass a instance of `DoubleClickListener` class to listen the events.
 
-Sample here.
+See the sample code below:
 ```java
 Button btn = new Button(this);
 btn.setOnClickListener( new DoubleClick(new DoubleClickListener() {
