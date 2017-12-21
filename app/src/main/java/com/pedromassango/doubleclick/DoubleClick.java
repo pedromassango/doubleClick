@@ -12,7 +12,7 @@ public class DoubleClick implements View.OnClickListener {
     private int clicks;
     private boolean isBussy = false;
     private final DoubleClickListener doubleClickListener;
-
+    Handler mHandler = new Handler();
     public DoubleClick( DoubleClickListener doubleClickListener) {
         this.doubleClickListener = doubleClickListener;
     }
@@ -26,10 +26,8 @@ public class DoubleClick implements View.OnClickListener {
 
             // Increase clicks count
             this.clicks++;
-            Handler handler = new Handler();
-            long TIME_TO_LISTEN_A_DOUBLE_CLICK = 250L;  // Time to wait the second click.
-
-            handler.postDelayed(new Runnable() {
+            long DOUBLE_CLICK_INTERVAL = 250L;  // Time to wait the second click.
+            mHandler.postDelayed(new Runnable() {
                 public final void run() {
 
                     if (clicks >= 2) {  // Double tap.
@@ -44,7 +42,7 @@ public class DoubleClick implements View.OnClickListener {
                     clicks = 0;
                     isBussy = false;
                 }
-            }, TIME_TO_LISTEN_A_DOUBLE_CLICK);
+            }, DOUBLE_CLICK_INTERVAL);
         }
     }
 }
