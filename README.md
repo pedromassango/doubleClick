@@ -1,5 +1,8 @@
 # DoubleClick on Android Views.
 A android library lo handle double click on android Views components. You just need to call it on your view `onCLickListener`.
+
+![alt tag](http://chevronscode.com/media/images/android_press_again_to_exit.jpg)
+
 ## Requirements
 ​
 - Android API level 14 or greater
