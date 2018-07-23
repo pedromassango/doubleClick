@@ -21,7 +21,7 @@ public class DoubleClick implements View.OnClickListener {
   /*
    * Handler to process click event.
    */
-  final Handler mHandler = new Handler();
+  private final Handler mHandler = new Handler();
 
   /*
    * Click callback.
@@ -41,7 +41,7 @@ public class DoubleClick implements View.OnClickListener {
   /**
    * Builds a DoubleClick.
    *
-   * @param doubleClickListener
+   * @param doubleClickListener the click listener to notify clicks.
    */
   public DoubleClick(final DoubleClickListener doubleClickListener) {
     this.doubleClickListener = doubleClickListener;
