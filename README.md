@@ -26,7 +26,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-	        compile 'com.github.pedromassango:doubleClick:v1.1'
+	        compile 'com.github.pedromassango:doubleClick:v1.2'
 	}
 ```
 
