@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/pedromassango/doubleClick.svg)](https://jitpack.io/#pedromassango/doubleClick)
+
 # DoubleClick on Android Views.
 A android library lo handle double click on android Views components. You just need to call it on your view `onCLickListener`.
 
@@ -26,7 +28,7 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 dependencies {
-	        compile 'com.github.pedromassango:doubleClick:v1.2'
+	        compile 'com.github.pedromassango:doubleClick:CURRENT-VERSION'
 	}
 ```
 
@@ -48,7 +50,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.pedromassango</groupId>
     <artifactId>doubleClick</artifactId>
-    <version>v1.1</version>
+    <version>CURRENT-VERSION</version>
 </dependency>
 ```
 
