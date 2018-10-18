@@ -44,7 +44,7 @@ public class DoubleClick implements View.OnClickListener {
    * @param doubleClickListener the click listener to notify clicks.
    */
   public DoubleClick(final DoubleClickListener doubleClickListener) {
-    this.doubleClickListener = doubleClickListener;
+    this(doubleClickListener, 200L);
     DOUBLE_CLICK_INTERVAL = 200L; // default time to wait the second click.
   }
 
