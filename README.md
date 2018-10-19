@@ -10,6 +10,9 @@ A android library lo handle double click on android Views components. You just n
 - Android API level 14 or greater
 - Your favorite IDE
 
+## Version
+The current version is: 2.0
+
 ## Setting up
 
 Gradle:
@@ -27,9 +30,9 @@ allprojects {
 
 Step 2. Add the dependency
 ```groovy
-dependencies {
-	        compile 'com.github.pedromassango:doubleClick:CURRENT-VERSION'
-	}
+
+implementation 'com.github.pedromassango:doubleClick:CURRENT-VERSION'
+
 ```
 
 Maven:
