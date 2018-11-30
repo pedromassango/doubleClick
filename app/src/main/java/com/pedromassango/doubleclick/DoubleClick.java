@@ -16,7 +16,7 @@ public class DoubleClick implements View.OnClickListener {
    * Duration of click interval.
    * 200 milliseconds is a best fit to double click interval.
    */
-  private static final long DOUBLE_CLICK_INTERVAL = 200L;  // Time to wait the second click.
+  private final long DOUBLE_CLICK_INTERVAL;  // Time to wait the second click.
 
   /*
    * Handler to process click event.
@@ -44,7 +44,13 @@ public class DoubleClick implements View.OnClickListener {
    * @param doubleClickListener the click listener to notify clicks.
    */
   public DoubleClick(final DoubleClickListener doubleClickListener) {
+    this(doubleClickListener, 200L);
+    DOUBLE_CLICK_INTERVAL = 200L; // default time to wait the second click.
+  }
+
+  public DoubleClick(final DoubleClickListener doubleClickListener, final long DOUBLE_CLICK_INTERVAL) {
     this.doubleClickListener = doubleClickListener;
+    this.DOUBLE_CLICK_INTERVAL = DOUBLE_CLICK_INTERVAL; // developer specified time to wait the second click.
   }
 
   @Override
