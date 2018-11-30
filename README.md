@@ -11,7 +11,7 @@ A android library lo handle double click on android Views components. You just n
 - Your favorite IDE
 
 ## Version
-The current version is: 2.0
+The current version is: 3.0
 
 ## Setting up
 
@@ -79,4 +79,6 @@ btn.setOnClickListener( new DoubleClick(new DoubleClickListener() {
                 // Double tap here.
             }
         });
+        //  use this to define your own interval
+        //  }, 100));
 ```
