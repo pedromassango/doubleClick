@@ -34,5 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.v(TAG, "onDoubleClick()");
             }
         }));
+        //  use this to define your own interval
+        //  }, 100));
     }
 }

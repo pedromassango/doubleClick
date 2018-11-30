@@ -16,7 +16,7 @@ public class DoubleClick implements View.OnClickListener {
    * Duration of click interval.
    * 200 milliseconds is a best fit to double click interval.
    */
-  private final long DOUBLE_CLICK_INTERVAL;  // Time to wait the second click.
+  private long DOUBLE_CLICK_INTERVAL;  // Time to wait the second click.
 
   /*
    * Handler to process click event.
